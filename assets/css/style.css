@@ -1,9 +1,122 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
-body{
-    font-size: 1.6rem;
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+}
+/* ===================================================common====================================== */
+.main-content {
+  max-width: 1150px;
+  margin: auto;
+}
+/* ===================================================header====================================== */
+.header {
+  height: 110px;
+}
+.header .header-top {
+  background: #f3f5f4;
+  padding: 10px 0 10px;
+}
+.header .header-top .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .body .logo {
+  width: 200px;
+}
+.header .search-box {
+  display: flex;
+  width: 491px;
+  height: 43px;
+  border: 1px solid #674346;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .search-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+.header .hotline-box {
+  display: flex;
+  align-items: center;
+}
+.header .hotline-box .phone {
+  width: 25px;
+  height: 25px;
+}
+.header .search-box .desc {
+  margin-left: 20px;
+  font-size: 1.3rem;
+  color: #282828;
+}
+.header .search-box .search-icon {
+  width: 25px;
+  height: 25px;
+}
+.header .hotline-box .phone {
+  width: 25px;
+  height: 25px;
+}
+.header .hotline-box .desc {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #272727;
+  margin-left: 5px;
+}
+.header .account-box {
+  display: flex;
+  margin-right: 15px;
+}
+.header .main-menu {
+  display: flex;
+  margin-left: 15px;
+}
+.header-bottom {
+  background: #633e41;
+}
+.header-bottom .body {
+  align-items: center;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-bottom .user {
+  width: 25px;
+  height: 25px;
+}
+.header-bottom .cart {
+  width: 25px;
+  height: 25px;
+  fill: white;
+  margin-left: 10px;
+}
+.header-bottom li {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: white;
+}
+.header-bottom ul {
+  gap: 30px;
+}
+.header-bottom .product-parent {
+  position: relative;
+}
+.header-bottom .product {
+  margin-right: 15px;
+}
+.header-bottom .product::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white; /* Tạo mũi tên tam giác */
 }
