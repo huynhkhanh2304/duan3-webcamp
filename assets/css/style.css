@@ -8,18 +8,28 @@ body {
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
 }
+:root {
+  --primary-color: #f29f33; 
+}
 /* ===================================================common====================================== */
 .main-content {
   max-width: 1150px;
   margin: auto;
 }
 /* ===================================================header====================================== */
+
 .header {
   height: 110px;
+  z-index: 1;
+}
+.header.sticky{
+  position: sticky;
+  top: 0;
 }
 .header .header-top {
-  background: #f3f5f4;
+  background: rgba(243, 245, 244, 0.9) ;
   padding: 10px 0 10px;
+  
 }
 .header .header-top .body {
   display: flex;
@@ -79,7 +89,7 @@ body {
   margin-left: 15px;
 }
 .header-bottom {
-  background: #633e41;
+  background: rgba(99, 62, 65, 0.9);
 }
 .header-bottom .body {
   align-items: center;
@@ -120,3 +130,59 @@ body {
   border-right: 5px solid transparent;
   border-top: 5px solid white; /* Tạo mũi tên tam giác */
 }
+
+/* ===================================================background====================================== */
+
+.background{
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  background-color: #FEF7EF;
+}
+.background img{
+  width: 100%;
+  height: auto;
+
+}
+/* ===================================================cta====================================== */
+.cta{
+  padding-top:50px;
+  background-color: #FEF7EF;
+}
+.cta .item{
+  display: flex;
+}
+.cta .item-right-top{
+  display: flex;
+}
+.cta .item-right-bottom{
+  display: flex;
+}
+.cta h1{
+  font-weight: 700;
+  font-size: 3.4rem;
+  color:var(--primary-color);
+  max-width: 630px;
+  height: 96px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* position: relative; */
+}
+.cta h1::after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 135px;
+  height: 2px;
+  background-color: var(--primary-color);
+  /* margin-top: 60px; */
+left: 50%;
+/* right: 50%; */
+
+}
+.cta span{
+margin-top: 50px;
+}
+/* code tiếp - ảnh bìa chưa nằm ở vị trí top:0 */
