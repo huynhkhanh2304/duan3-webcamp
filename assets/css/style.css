@@ -9,7 +9,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 :root {
-  --primary-color: #f29f33; 
+  --primary-color: #f29f33;
 }
 /* ===================================================common====================================== */
 .main-content {
@@ -22,14 +22,13 @@ body {
   height: 110px;
   z-index: 1;
 }
-.header.sticky{
+.header.sticky {
   position: sticky;
   top: 0;
 }
 .header .header-top {
-  background: rgba(243, 245, 244, 0.9) ;
+  background: rgba(243, 245, 244, 0.8);
   padding: 10px 0 10px;
-  
 }
 .header .header-top .body {
   display: flex;
@@ -89,7 +88,7 @@ body {
   margin-left: 15px;
 }
 .header-bottom {
-  background: rgba(99, 62, 65, 0.9);
+  background: rgba(99, 62, 65, 0.8);
 }
 .header-bottom .body {
   align-items: center;
@@ -133,56 +132,125 @@ body {
 
 /* ===================================================background====================================== */
 
-.background{
+.background {
   width: 100%;
   height: auto;
   position: relative;
-  top: 0;
-  background-color: #FEF7EF;
+  transform: translateY(-13%);
 }
-.background img{
+.background img {
   width: 100%;
   height: auto;
-
+}
+.background-cta {
+  background-color: #fef7ef;
 }
 /* ===================================================cta====================================== */
-.cta{
-  padding-top:50px;
-  background-color: #FEF7EF;
+.cta {
+  padding-top: 50px;
+  padding-bottom:30px;
+  margin-top: -125px;
 }
-.cta .item{
+.cta .item {
   display: flex;
 }
-.cta .item-right-top{
+.cta .item-right-top {
   display: flex;
 }
-.cta .item-right-bottom{
+.cta .item-right-bottom {
   display: flex;
 }
-.cta h1{
+.cta h1 {
   font-weight: 700;
   font-size: 3.4rem;
-  color:var(--primary-color);
+  color: var(--primary-color);
   max-width: 630px;
   height: 96px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  /* position: relative; */
+  position: relative;
+  line-height: 4.8rem;
+  margin-bottom: 50px;
 }
-.cta h1::after{
+.cta h1::after {
   content: "";
   position: absolute;
   display: block;
   width: 135px;
   height: 2px;
   background-color: var(--primary-color);
-  /* margin-top: 60px; */
-left: 50%;
-/* right: 50%; */
+  right: 50%;
+  transform: translateX(50%);
+  margin-top: 22px;
+}
 
+.cta .desc{
+  display: block;
+  font-size: 1.6rem;
+  color: #656565;
+  line-height: 2.6rem;
+  margin-bottom: 25px;
+text-align: center;
 }
-.cta span{
-margin-top: 50px;
+.cta .item-left{
+  max-width: 566px;
 }
-/* code tiếp - ảnh bìa chưa nằm ở vị trí top:0 */
+.cta .item-left img{
+  width: 100%;
+  height: 423px;
+  border-radius: 20px;
+  cursor: pointer;
+  object-fit: cover;
+}
+.cta .item-right{
+  max-width: 51%;
+  margin-left: 25px;
+}
+.cta .item-right .common{
+  background-color: #fff;
+  border-radius: 20px;
+  max-width: 268px;
+  height: 199px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.cta .item-right .common:hover{
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+.cta .item-right .common:hover p,
+.cta .item-right .common:hover h2{
+  color:white;
+}
+.cta .item-right img{
+  max-width: 50px;
+  height: auto;
+}
+.cta .item-right h2{
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+}
+.cta .item-right p{
+  font-size: 1.4rem;
+  color: #656565;
+  max-width: 238px;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 25px;
+}
+.cta .item-right-bottom{
+  margin-top: 23px;
+}
+.cta .warranty,
+.cta .quality{
+  margin-left: 25px;
+}
