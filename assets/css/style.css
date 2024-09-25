@@ -12,9 +12,12 @@ body {
   --primary-color: #f29f33;
 }
 /* ===================================================common====================================== */
-.main-content {
+.main-contain {
   max-width: 1150px;
   margin: auto;
+}
+a{
+  text-decoration: none;
 }
 /* ===================================================header====================================== */
 
@@ -148,7 +151,7 @@ body {
 /* ===================================================cta====================================== */
 .cta {
   padding-top: 50px;
-  padding-bottom:30px;
+  padding-bottom:90px;
   margin-top: -125px;
 }
 .cta .item {
@@ -195,10 +198,11 @@ text-align: center;
 }
 .cta .item-left{
   max-width: 566px;
+  /* height: auto; */
 }
 .cta .item-left img{
   width: 100%;
-  height: 423px;
+  min-height: 423px;
   border-radius: 20px;
   cursor: pointer;
   object-fit: cover;
@@ -211,7 +215,7 @@ text-align: center;
   background-color: #fff;
   border-radius: 20px;
   max-width: 268px;
-  height: 199px;
+  min-height: 199px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,6 +231,10 @@ text-align: center;
 .cta .item-right .common:hover p,
 .cta .item-right .common:hover h2{
   color:white;
+}
+.cta .item-right .common:hover img{
+  filter: invert(100%);
+  filter: brightness(1000%);
 }
 .cta .item-right img{
   max-width: 50px;
@@ -245,7 +253,7 @@ text-align: center;
   max-width: 238px;
   margin-top: 10px;
   text-align: center;
-  line-height: 25px;
+  line-height: 1.78;  /* */
 }
 .cta .item-right-bottom{
   margin-top: 23px;
@@ -253,4 +261,201 @@ text-align: center;
 .cta .warranty,
 .cta .quality{
   margin-left: 25px;
+}
+/* ===================================================service====================================== */
+.service{
+  padding: 60px 0 60px;
+  background-image:url(https://t4.ftcdn.net/jpg/06/54/08/55/360_F_654085598_siBDdqERrp3cx8x8aBAhM7XXivCgeVDi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.service .body{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.service .box{
+  max-width: 295px;
+  height: 390px;
+  position: relative;
+}
+.service .box h1{
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 48px;
+  color: var(--primary-color);
+  position: relative;
+}
+.service .box h1::after{
+  display: block;
+  content: "";
+  width: 135px;
+  height: 2px;
+  position: absolute;
+  background-color: var(--primary-color);
+  top: 60px;
+}
+.service .box .desc{
+  margin-top: 35px;
+  line-height: 30px;
+  font-size: 1.6rem;
+  color:#282828;
+  max-width: 265px;
+}
+
+.service .box button{
+  border: none;
+  width: 265px;
+  height: 60px;
+  background-color: var(--primary-color);
+  margin-top: 35px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.service .box button:hover{
+  background: #513437;
+}
+.service .box button p{
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 32px;
+  color:white;
+}
+.service .box .photo-service{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 1s ease;
+}
+.service .box .photo-service:hover{
+  transform: scale(1.2);
+  border-radius: 20px;
+}
+.service .box3,.service .box4,
+.service .box2{
+  overflow: hidden;
+  
+  border-radius: 20px;
+}
+
+.service .info{
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+left: 35px;
+align-items: center;
+
+}
+.service .box .line{
+  width: 3px;
+  height: 45px;
+  background: white;
+  margin-left: 17px;
+  border-radius: 10px;
+}
+.service .box .service-icon{
+  width: 44px;
+  height: auto;
+}
+.service .box span{
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 26px;
+  color: white;
+  margin-left: 10px;
+}
+/* ===================================================product====================================== */
+.product{
+  background-color: #FDF8F7;
+  padding: 50px 0 50px;
+}
+.product h1{
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 48px;
+  color:var(--primary-color);
+  text-align: center;
+  position: relative;
+}
+.product h1::after{
+  content: "";
+  width: 135px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  background-color: var(--primary-color);
+left: 50%;
+transform: translateX(-50%);
+margin-top: 30px;
+}
+.product .product-top{
+  display: flex;
+  margin-top: 75px;
+}
+.product-top-left{
+  display: flex;
+  width: 48.7%;
+}
+.product-top-left .img-item{
+  width: 100%;
+  border-radius: 20px;
+  height: 270px;
+  object-fit: cover;
+}
+.product-top-left .item1{
+  width: 270px;
+  height: 346px;
+  position: relative;
+}
+.product-top-left .item2{
+  margin-left: 20px;
+  width: 270px;
+  height: 346px;
+  position: relative;
+}
+.product-top-left .price{
+  display: flex;
+  margin-top: 14px;
+  align-items: center;
+}
+.product-top-left h2{
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 18px;
+  color:#474747;
+  margin-top: 14px;
+}
+.product-top-left h2:hover{
+  color: var(--primary-color);
+}
+.product-top-left span{
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--primary-color);
+}
+.product-top-left p{
+  font-size: 1.2rem;
+  line-height: 12px;
+  color:#777777;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+.product-top-left .number{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 64px;
+  height: 28px;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 25px;
+  font-weight: 600;
 }
